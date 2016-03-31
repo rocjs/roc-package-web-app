@@ -1,0 +1,18 @@
+{
+  "name": "roc-web-app-server-example",
+  "version": "1.0.0",
+  "description": "Roc Web server example",
+  "author": "VG",
+  "license": "MIT",
+  "scripts": {
+    "dev": "roc dev --build-targets node --build-input-node index.js",
+    "build": "roc build --build-targets node --build-input-node index.js",
+    "start": "roc start"
+  },
+  "dependencies": {
+    "roc-package-web-app": "*"
+  },
+  "devDependencies": {
+    "roc-package-web-app-dev": "*"
+  }
+}

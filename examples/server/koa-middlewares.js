@@ -1,0 +1,8 @@
+export default function middlewares(/* config */) {
+    return [function *(next) {
+        yield next;
+        if (!this.body) {
+            this.body = 'Not other content! :)';
+        }
+    }];
+}
