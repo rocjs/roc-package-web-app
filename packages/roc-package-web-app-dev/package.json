@@ -1,0 +1,43 @@
+{
+  "name": "roc-package-web-app-dev",
+  "version": "1.0.0-alpha.0",
+  "description": "Package for building web applications using Roc (Development)",
+  "main": "lib/index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "roc-dev",
+    "server",
+    "client"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rocjs/roc-package-web-app.git"
+  },
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "roc": "^1.0.0-rc",
+    "roc-package-base-dev": "^1.0.0-alpha",
+    "roc-package-web-app": "^1.0.0-alpha",
+    "roc-package-webpack-node-dev": "^1.0.0-alpha",
+    "roc-package-webpack-web-dev": "^1.0.0-alpha",
+    "roc-plugin-browsersync": "^1.0.0-alpha",
+    "roc-plugin-style-css": "^1.0.0-alpha"
+  },
+  "devDependencies": {
+    "babel-eslint": "~5.0.0",
+    "eslint": "~1.10.3",
+    "eslint-config-vgno": "~5.0.0"
+  }
+}

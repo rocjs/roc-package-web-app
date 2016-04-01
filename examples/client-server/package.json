@@ -1,0 +1,13 @@
+{
+  "name": "roc-web-app-client-server-example",
+  "version": "1.0.0",
+  "description": "Roc Web client & server example",
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "roc-package-web-app": "*"
+  },
+  "devDependencies": {
+    "roc-package-web-app-dev": "*"
+  }
+}
