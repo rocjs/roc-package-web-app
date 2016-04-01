@@ -10,7 +10,9 @@
   },
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "app",
+    "certificate"
   ],
   "keywords": [
     "roc",
