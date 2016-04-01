@@ -11,7 +11,7 @@ export default {
     actions: {
         resolver: {
             extension: 'roc-plugin-start',
-            hook: 'get-resolve-path',
+            hook: 'get-resolve-paths',
             action: () => () => () => () => resolvePath
         },
         runtime: {
