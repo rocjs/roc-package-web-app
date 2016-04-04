@@ -33,7 +33,8 @@
     "roc-package-webpack-node-dev": "^1.0.0-alpha",
     "roc-package-webpack-web-dev": "^1.0.0-alpha",
     "roc-plugin-browsersync": "^1.0.0-alpha",
-    "roc-plugin-style-css": "^1.0.0-alpha"
+    "roc-plugin-style-css": "^1.0.0-alpha",
+    "roc-plugin-assets-images": "^1.0.0-alpha"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
