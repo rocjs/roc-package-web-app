@@ -36,6 +36,7 @@ export default {
     ],
     plugins: [
         require.resolve('roc-plugin-style-css'),
-        require.resolve('roc-plugin-browsersync')
+        require.resolve('roc-plugin-browsersync'),
+        require.resolve('roc-plugin-assets-images')
     ]
 };
