@@ -25,6 +25,8 @@
   * [css](#css)
 * [roc-plugin-browsersync](#roc-plugin-browsersync)
   * [browsersync](#browsersync)
+* [roc-plugin-assets-images](#roc-plugin-assets-images)
+  * [images](#images)
 * [roc-package-web-app-dev](#roc-package-web-app-dev)
   * [devStarted](#devStarted)
   * [webpack](#webpack)
@@ -152,6 +154,15 @@ Adds a Browsersync instance.
 
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `server-started`  
+
+## roc-plugin-assets-images
+
+### images
+
+Adds images support.
+
+__Connects to extension:__ Not specified  
+__Connects to hook:__ `build-webpack`  
 
 ## roc-package-web-app-dev
 

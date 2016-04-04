@@ -1,6 +1,6 @@
 {
   "name": "roc-package-web-app",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Package for building web applications using Roc",
   "main": "lib/index.js",
   "bin": "bin/index.js",

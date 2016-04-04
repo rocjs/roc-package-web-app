@@ -14,6 +14,8 @@
   * [get-webpack-targets](#get-webpack-targets)
 * [roc-package-webpack-node-dev](#roc-package-webpack-node-dev)
   * [dev-process-created](#dev-process-created)
+* [roc-plugin-assets-images](#roc-plugin-assets-images)
+  * [add-image](#add-image)
 * [roc-plugin-start](#roc-plugin-start)
   * [get-potential-target](#get-potential-target)
   * [get-resolve-paths](#get-resolve-paths)
@@ -119,6 +121,18 @@ __Expected return value:__ _Nothing_
 | Name          | Description                 | Type |
 | ------------- | --------------------------- | ---- |
 | serverProcess | The created server process. |      |
+
+## roc-plugin-assets-images
+
+### add-image
+
+Used for adding additional image loaders.
+
+Important that the _actions_ return an array with loaders or a single loader
+
+
+__Initial value:__ _Nothing_  
+__Expected return value:__ `{} / [{}]`
 
 ## roc-plugin-start
 
