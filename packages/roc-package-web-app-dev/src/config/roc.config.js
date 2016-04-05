@@ -6,7 +6,6 @@ export default {
             watch: roc.config.settings.dev.watch.concat('config/')
         },
         build: {
-            path: '/',
             targets: ['web', 'node'],
             input: {
                 web: 'src/client/index.js',

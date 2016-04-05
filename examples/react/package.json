@@ -1,0 +1,15 @@
+{
+  "name": "roc-web-app-react-example",
+  "version": "1.0.0",
+  "description": "Roc Web client & server example",
+  "author": "VG",
+  "license": "MIT",
+  "dependencies": {
+    "roc-package-web-app": "*",
+    "roc-plugin-react": "^1.0.0-alpha"
+  },
+  "devDependencies": {
+    "roc-package-web-app-dev": "*",
+    "roc-plugin-react-dev": "^1.0.0-alpha"
+  }
+}

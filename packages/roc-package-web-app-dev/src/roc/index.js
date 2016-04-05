@@ -10,7 +10,6 @@ export default {
     actions: {
         webpack: {
             description: 'Adds needed configuration to being able to build web applications.',
-            extension: 'roc-package-webpack-dev',
             hook: 'build-webpack',
             action: builder
         },

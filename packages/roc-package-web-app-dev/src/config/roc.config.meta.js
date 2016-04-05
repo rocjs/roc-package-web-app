@@ -8,7 +8,6 @@ export default {
     settings: {
         descriptions: {
             build: {
-                path: 'The basepath for the application.',
                 input: {
                     web: 'The client entry point file.',
                     node: 'The server entry point file.'
@@ -26,7 +25,6 @@ export default {
 
         validations: {
             build: {
-                path: isPath,
                 targets: isArray(/^web|node$/i),
                 input: {
                     web: isPath,

@@ -1,4 +1,4 @@
-/* global USE_DEFAULT_KOA_MIDDLEWARES HAS_KOA_MIDDLEWARES KOA_MIDDLEWARES ROC_PATH __DEV__  */
+/* global USE_DEFAULT_KOA_MIDDLEWARES HAS_KOA_MIDDLEWARES KOA_MIDDLEWARES __DEV__  */
 
 import { readFileSync } from 'fs';
 import debug from 'debug';
@@ -37,10 +37,10 @@ export default function createServer(options = {}, beforeUserMiddlewares = []) {
     logger.log = console.info.bind(console);
 
     const server = koa();
-    const settings = merge(getSettings('runtime'), options);
+    const runtimeSettings = merge(getSettings('runtime'), options);
 
     if (USE_DEFAULT_KOA_MIDDLEWARES) {
-        const middlewares = require('./middlewares').default(settings);
+        const middlewares = require('./middlewares').default(runtimeSettings);
         middlewares.forEach((middleware) => server.use(middleware));
     }
 
@@ -49,7 +49,7 @@ export default function createServer(options = {}, beforeUserMiddlewares = []) {
     }
 
     if (HAS_KOA_MIDDLEWARES) {
-        const middlewares = require(KOA_MIDDLEWARES).default(settings);
+        const middlewares = require(KOA_MIDDLEWARES).default(runtimeSettings);
         middlewares.forEach((middleware) => server.use(middleware));
     }
 
@@ -62,38 +62,38 @@ export default function createServer(options = {}, beforeUserMiddlewares = []) {
         }
     };
 
-    if (settings.koa.normalize.enabled) {
-        server.use(normalizePath({ defer: settings.koa.normalize.defer }));
+    if (runtimeSettings.koa.normalize.enabled) {
+        server.use(normalizePath({ defer: runtimeSettings.koa.normalize.defer }));
     }
 
-    if (settings.koa.lowercase.enabled) {
-        server.use(lowercasePath({ defer: settings.koa.lowercase.defer }));
+    if (runtimeSettings.koa.lowercase.enabled) {
+        server.use(lowercasePath({ defer: runtimeSettings.koa.lowercase.defer }));
     }
 
-    if (settings.koa.trailingSlashes.enabled === true) {
-        server.use(addTrailingSlash({ defer: settings.koa.trailingSlashes.defer }));
-    } else if (settings.koa.trailingSlashes.enabled === false) {
+    if (runtimeSettings.koa.trailingSlashes.enabled === true) {
+        server.use(addTrailingSlash({ defer: runtimeSettings.koa.trailingSlashes.defer }));
+    } else if (runtimeSettings.koa.trailingSlashes.enabled === false) {
         server.use(removeTrailingSlash());
     }
 
     // Serve folders
-    makeServe(settings.serve);
+    makeServe(runtimeSettings.serve);
 
     function start(port, httpsPort) {
-        port = port || process.env.PORT || settings.port;
-        httpsPort = httpsPort || process.env.HTTPS_PORT || settings.https.port;
+        port = port || process.env.PORT || runtimeSettings.port;
+        httpsPort = httpsPort || process.env.HTTPS_PORT || runtimeSettings.https.port;
 
         const app = koa();
-        app.use(mount(ROC_PATH, server));
+        app.use(mount(runtimeSettings.path, server));
 
         // Start the server on HTTP
         http.createServer(app.callback()).listen(port);
-        logger(`Server started on port ${port} (HTTP) and served from ${ROC_PATH}`);
+        logger(`Server started on port ${port} (HTTP) and served from ${runtimeSettings.path}`);
 
         // If a HTTPS port is defined we will try to start the application with SSL/TLS
         if (httpsPort) {
-            let key = getAbsolutePath(settings.https.key);
-            let cert = getAbsolutePath(settings.https.cert);
+            let key = getAbsolutePath(runtimeSettings.https.key);
+            let cert = getAbsolutePath(runtimeSettings.https.cert);
 
             // Add a self-signed certificate for development purposes if non is provided.
             if (__DEV__ && !key && !cert) {
@@ -108,7 +108,7 @@ export default function createServer(options = {}, beforeUserMiddlewares = []) {
                 };
 
                 https.createServer(httpsOptions, app.callback()).listen(httpsPort);
-                logger(`Server started on port ${httpsPort} (HTTPS) and served from ${ROC_PATH}`);
+                logger(`Server started on port ${httpsPort} (HTTPS) and served from ${runtimeSettings.path}`);
             } else {
                 logger('You have defined a HTTPS port but not given any certificate files to use…');
             }
