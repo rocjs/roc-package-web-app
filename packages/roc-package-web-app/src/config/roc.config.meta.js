@@ -30,6 +30,7 @@ export default {
                 serve: 'What folder the server should expose.',
                 favicon: 'Path to the favicon file, specially handled on the server.',
                 startBundle: 'Relative path to a bundle to start when calling "start".',
+                path: 'The basepath for the application.',
                 koa: {
                     lowercase: {
                         enabled: 'If paths should be transformed to lowercase.',
@@ -56,6 +57,7 @@ export default {
                 serve: isArrayOrSingle(isPath),
                 favicon: isString,
                 startBundle: isPath,
+                path: isPath,
                 koa: {
                     lowercase: {
                         enabled: isBoolean,

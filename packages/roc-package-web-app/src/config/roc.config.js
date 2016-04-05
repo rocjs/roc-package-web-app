@@ -15,6 +15,7 @@ export default {
             ],
             favicon: '',
             startBundle: 'build/server/app.js',
+            path: '/',
             koa: {
                 lowercase: {
                     enabled: true,
