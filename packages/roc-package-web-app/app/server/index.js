@@ -1,4 +1,4 @@
-/* global USE_DEFAULT_KOA_MIDDLEWARES HAS_KOA_MIDDLEWARES KOA_MIDDLEWARES ROC_PATH __DEV__  */
+/* global USE_DEFAULT_KOA_MIDDLEWARES HAS_KOA_MIDDLEWARES KOA_MIDDLEWARES __DEV__  */
 
 import { readFileSync } from 'fs';
 import debug from 'debug';
