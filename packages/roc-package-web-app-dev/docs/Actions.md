@@ -88,7 +88,7 @@ __Connects to hook:__ `run-dev-command`
 
 Adds base Webpack configuration.
 
-__Connects to extension:__ `roc-package-webpack-dev`  
+__Connects to extension:__ Not specified  
 __Connects to hook:__ `build-webpack`  
 
 ## roc-package-webpack-node-dev
@@ -111,7 +111,7 @@ __Connects to hook:__ `create-watchers`
 
 Adds configuration needed for building for Node.
 
-__Connects to extension:__ `roc-package-webpack-dev`  
+__Connects to extension:__ Not specified  
 __Connects to hook:__ `build-webpack`  
 
 ## roc-package-webpack-web-dev
@@ -134,7 +134,7 @@ __Connects to hook:__ `create-watchers`
 
 Adds configuration need for web builds for Webpack.
 
-__Connects to extension:__ `roc-package-webpack-dev`  
+__Connects to extension:__ Not specified  
 __Connects to hook:__ `build-webpack`  
 
 ## roc-plugin-style-css
@@ -175,5 +175,5 @@ __Connects to hook:__ `dev-process-created`
 
 Adds needed configuration to being able to build web applications.
 
-__Connects to extension:__ `roc-package-webpack-dev`  
+__Connects to extension:__ Not specified  
 __Connects to hook:__ `build-webpack`  
