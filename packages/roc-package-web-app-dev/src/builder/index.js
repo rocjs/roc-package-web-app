@@ -1,6 +1,6 @@
 import { getSettings, getAbsolutePath, fileExists } from 'roc';
 import { resolvePath } from 'roc-package-web-app';
-import { removeTrailingSlash } from 'roc-package-webpack-web-dev';
+import { removeTrailingSlash } from 'roc-package-webpack-dev';
 
 export default () => ({ previousValue: rocBuilder }) => (target) => {
     if (target === 'web' || target === 'node') {
