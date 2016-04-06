@@ -1,4 +1,4 @@
-/* global USE_DEFAULT_KOA_MIDDLEWARES HAS_KOA_MIDDLEWARES KOA_MIDDLEWARES __DEV__  */
+/* global USE_DEFAULT_KOA_MIDDLEWARES HAS_KOA_MIDDLEWARES KOA_MIDDLEWARES __DEV__ ROC_PATH  */
 
 import { readFileSync } from 'fs';
 import debug from 'debug';
@@ -84,11 +84,11 @@ export default function createServer(options = {}, beforeUserMiddlewares = []) {
         httpsPort = httpsPort || process.env.HTTPS_PORT || runtimeSettings.https.port;
 
         const app = koa();
-        app.use(mount(runtimeSettings.path, server));
+        app.use(mount(ROC_PATH, server));
 
         // Start the server on HTTP
         http.createServer(app.callback()).listen(port);
-        logger(`Server started on port ${port} (HTTP) and served from ${runtimeSettings.path}`);
+        logger(`Server started on port ${port} (HTTP) and served from ${ROC_PATH}`);
 
         // If a HTTPS port is defined we will try to start the application with SSL/TLS
         if (httpsPort) {
@@ -108,7 +108,7 @@ export default function createServer(options = {}, beforeUserMiddlewares = []) {
                 };
 
                 https.createServer(httpsOptions, app.callback()).listen(httpsPort);
-                logger(`Server started on port ${httpsPort} (HTTPS) and served from ${runtimeSettings.path}`);
+                logger(`Server started on port ${httpsPort} (HTTPS) and served from ${ROC_PATH}`);
             } else {
                 logger('You have defined a HTTPS port but not given any certificate files to use…');
             }
