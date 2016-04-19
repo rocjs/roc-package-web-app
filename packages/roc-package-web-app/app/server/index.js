@@ -55,10 +55,17 @@ export default function createServer(options = {}, beforeUserMiddlewares = []) {
 
     const makeServe = (toServe = []) => {
         toServe = [].concat(toServe);
+
+        const staticSettings = process.env.NODE_ENV === 'production' ? runtimeSettings.koa.staticServe : {};
+
         for (const path of toServe) {
-            // We use defer here to no try to fetch a file if we have set something on body, something that is done in
+            server.use(serve(path, {
+            // We use defer as default here to no try to fetch a file
+            // if we have set something on body, something that is done in
             // redirect. This because https://github.com/koajs/send/issues/51
-            server.use(serve(path, { defer: true }));
+                defer: true,
+                ...staticSettings
+            }));
         }
     };
 
