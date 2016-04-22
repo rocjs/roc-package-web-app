@@ -120,6 +120,12 @@ Settings for how Koa should handle paths.
 | defer                    | If this should be performed after looking for a file on disk.                                                                   | runtime.koa.normalize.defer         | --koa-normalize-defer                 | `false`                           | `Boolean`               | No       |
 | enabled                  | If paths should be normalized, that is remove extra slashes.                                                                    | runtime.koa.normalize.enabled       | --koa-normalize-enabled               | `true`                            | `Boolean`               | No       |
 
+#### StaticServe
+
+| Name                     | Description                                                                                                                     | Path                                | CLI option                            | Default                           | Type                    | Required |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------- | --------------------------------- | ----------------------- | -------- |
+| maxage                   | Browser cache max-age in milliseconds. Production only.                                                                         | runtime.koa.staticServe.maxage      | --koa-staticServe-maxage              | `60000`                           | `Unknown`               | No       |
+
 #### TrailingSlashes
 
 | Name                     | Description                                                                                                                     | Path                                | CLI option                            | Default                           | Type                    | Required |
