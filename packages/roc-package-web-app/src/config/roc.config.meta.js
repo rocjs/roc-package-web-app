@@ -42,6 +42,9 @@ export default {
                     trailingSlashes: {
                         enabled: 'Set to true to enforce trailing slashes, false to remove them and null for no rule.',
                         defer: 'If this should be performed after looking for a file on disk.'
+                    },
+                    staticServe: {
+                        maxage: 'Browser cache max-age in milliseconds. Production only.'
                     }
                 }
             }

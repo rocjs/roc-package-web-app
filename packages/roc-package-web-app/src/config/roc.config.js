@@ -27,6 +27,9 @@ export default {
                 trailingSlashes: {
                     enabled: true,
                     defer: true
+                },
+                staticServe: {
+                    maxage: 60000
                 }
             }
         }
