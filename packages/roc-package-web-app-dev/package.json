@@ -30,6 +30,7 @@
     "roc": "^1.0.0-rc",
     "roc-package-base-dev": "^1.0.0-alpha",
     "roc-package-web-app": "^1.0.0-alpha",
+    "roc-package-webpack-dev": "^1.0.0-alpha",
     "roc-package-webpack-node-dev": "^1.0.0-alpha",
     "roc-package-webpack-web-dev": "^1.0.0-alpha",
     "roc-plugin-browsersync": "^1.0.0-alpha",
