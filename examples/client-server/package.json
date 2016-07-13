@@ -9,5 +9,12 @@
   },
   "devDependencies": {
     "roc-package-web-app-dev": "*"
+  },
+  "roc": {
+      "packages": [
+          "web-app",
+          "web-app-dev",
+          "./packages/custom"
+      ]
   }
 }

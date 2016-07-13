@@ -3,14 +3,16 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "start": "rid",
     "rid": "rid",
     "build": "rid build",
     "lint": "rid lint:alias",
     "link": "rid link",
+    "link:all": "rid link roc,roc-package-webpack-dev,roc-package-webpack-node,roc-package-webpack-web,roc-package-webpack-node-dev,roc-package-webpack-web-dev,roc-plugin-browsersync,roc-plugin-style-css,roc-plugin-assets-images",
     "test": "npm run lint"
   },
   "devDependencies": {
-    "@rocjs/roc-internal-dev": "^1.0.0",
-    "babel-plugin-transform-async-to-generator": "~6.5.0"
+    "@rocjs/roc-internal-dev": "^2.0.0",
+    "babel-plugin-transform-async-to-generator": "~6.8.0"
   }
 }

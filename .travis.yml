@@ -1,9 +1,12 @@
-sudo: required
 language: node_js
+cache:
+  directories:
+    - node_modules
 node_js:
-    - 4.2
-    - stable
+  - 4.2
+before_install:
+  - npm install -g npm
 before_script:
-    - npm run link
+  - npm run link
 after_success:
-    - npm run build
+  - npm run build && npm run docs
