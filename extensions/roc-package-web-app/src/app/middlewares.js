@@ -1,5 +1,3 @@
-/* global __DEV__ __DIST__ */
-
 import koaErrors from 'koa-errors';
 import helmet from 'koa-helmet';
 import koaEtag from 'koa-etag';
@@ -9,15 +7,15 @@ import koaAccesslog from 'koa-accesslog';
 import koaLogger from 'koa-logger';
 
 /**
- * Returns the middlewares to be used
+ * Returns the middlewares to be used.
  *
- * @param {object} config - A roc config object.
+ * @param {object} settings - Runtime settings
  * @returns {array} A array with middlewares to use.
  */
-export default function middlewares(config) {
+export default function middlewares(config, { dev, dist }) {
     const middlewaresList = [];
 
-    if (__DEV__) {
+    if (dev) {
         middlewaresList.push(koaErrors());
     }
 
@@ -27,7 +25,7 @@ export default function middlewares(config) {
     middlewaresList.push(koaEtag());
 
     // We only enable gzip in dist
-    if (__DIST__) {
+    if (dist) {
         middlewaresList.push(koaCompressor());
     }
 
@@ -36,7 +34,7 @@ export default function middlewares(config) {
         middlewaresList.push(koaFavicon(favicon));
     }
 
-    if (__DIST__) {
+    if (dist) {
         middlewaresList.push(koaAccesslog());
     } else {
         middlewaresList.push(koaLogger());

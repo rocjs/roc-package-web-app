@@ -5,8 +5,8 @@
   "author": "VG",
   "license": "MIT",
   "scripts": {
-    "dev": "roc dev --build-targets node --build-input-node index.js",
-    "build": "roc build --build-targets node --build-input-node index.js",
+    "dev": "roc dev --build-targets node --build-input-node index.js --build-koaMiddlewares koa-middlewares.js",
+    "build": "roc build --build-targets node --build-input-node index.js --build-koaMiddlewares koa-middlewares.js",
     "start": "roc start"
   },
   "dependencies": {

@@ -22,6 +22,8 @@ export default {
     dependencies: {
         exports: generateDependencies(packageJSON, [
             'config',
+        ]),
+        uses: generateDependencies(packageJSON, [
             'koa',
             'koa-static',
             'koa-mount',
@@ -36,11 +38,6 @@ export default {
             'koa-normalize-path',
             'koa-lowercase-path',
             'koa-remove-trailing-slashes',
-        ]),
-        uses: generateDependencies(packageJSON, [
-            'koa',
-            'koa-accesslog',
-            'koa-add-trailing-slashes',
         ]),
     },
 };
