@@ -26,7 +26,6 @@
   "license": "MIT",
   "dependencies": {
     "roc": "^1.0.0-rc",
-    "roc-package-web-app": "^1.0.0-beta",
     "roc-package-webpack-dev": "^1.0.0-beta",
     "roc-package-webpack-node-dev": "^1.0.0-beta",
     "roc-package-webpack-web-dev": "^1.0.0-beta",
