@@ -25,13 +25,13 @@
   }],
   "license": "MIT",
   "dependencies": {
-    "roc": "^1.0.0-rc",
-    "roc-package-webpack-dev": "^1.0.0-beta",
-    "roc-package-webpack-node-dev": "^1.0.0-beta",
-    "roc-package-webpack-web-dev": "^1.0.0-beta",
-    "roc-plugin-browsersync": "^1.0.0-beta",
-    "roc-plugin-style-css": "^1.0.0-beta",
-    "roc-plugin-assets-images": "^1.0.0-beta"
+    "roc": "1.0.0-rc.11",
+    "roc-package-webpack-dev": "1.0.0-beta.1",
+    "roc-package-webpack-node-dev": "1.0.0-beta.1",
+    "roc-package-webpack-web-dev": "1.0.0-beta.1",
+    "roc-plugin-browsersync": "1.0.0-beta.1",
+    "roc-plugin-style-css": "1.0.0-beta.1",
+    "roc-plugin-assets-images": "1.0.0-beta.1"
   },
   "devDependencies": {
     "babel-eslint": "~6.1.2",
