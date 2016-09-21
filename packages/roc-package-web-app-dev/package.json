@@ -27,15 +27,15 @@
   "author": "VG",
   "license": "MIT",
   "dependencies": {
-    "roc": "^1.0.0-rc",
-    "roc-package-base-dev": "^1.0.0-alpha",
-    "roc-package-web-app": "^1.0.0-alpha",
-    "roc-package-webpack-dev": "^1.0.0-alpha",
-    "roc-package-webpack-node-dev": "^1.0.0-alpha",
-    "roc-package-webpack-web-dev": "^1.0.0-alpha",
-    "roc-plugin-browsersync": "^1.0.0-alpha",
-    "roc-plugin-style-css": "^1.0.0-alpha",
-    "roc-plugin-assets-images": "^1.0.0-alpha"
+    "roc": "1.0.0-rc.10",
+    "roc-package-base-dev": "1.0.0-alpha.10",
+    "roc-package-web-app": "1.0.0-alpha.8",
+    "roc-package-webpack-dev": "1.0.0-alpha.11",
+    "roc-package-webpack-node-dev": "1.0.0-alpha.5",
+    "roc-package-webpack-web-dev": "1.0.0-alpha.7",
+    "roc-plugin-browsersync": "1.0.0-alpha.3",
+    "roc-plugin-style-css": "1.0.0-alpha.6",
+    "roc-plugin-assets-images": "1.0.0-alpha.2"
   },
   "devDependencies": {
     "babel-eslint": "~5.0.0",
