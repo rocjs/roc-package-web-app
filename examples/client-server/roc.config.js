@@ -9,6 +9,13 @@ module.exports = {
             input: {
                 web: 'client.js',
                 node: 'server.js'
+            },
+            style: {
+                autoprefixer: {
+                    __raw: {
+                        hest: true
+                    }
+                }
             }
         }
     }

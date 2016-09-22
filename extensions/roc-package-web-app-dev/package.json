@@ -1,0 +1,48 @@
+{
+  "name": "roc-package-web-app-dev",
+  "version": "1.0.0-beta.0",
+  "description": "Package for building web applications using Roc (Development)",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "roc",
+    "roc-package",
+    "webpack",
+    "roc-dev",
+    "server",
+    "client"
+  ],
+  "repository": "https://github.com/rocjs/roc-package-web-app/tree/master/extensions/roc-package-web-app-dev",
+  "author": "Verdens Gang AS",
+  "contributors": [{
+    "name": "Gustaf Dalemar"
+  }],
+  "license": "MIT",
+  "dependencies": {
+    "roc": "1.0.0-rc.11",
+    "roc-package-webpack-dev": "1.0.0-beta.1",
+    "roc-package-webpack-node-dev": "1.0.0-beta.1",
+    "roc-package-webpack-web-dev": "1.0.0-beta.1",
+    "roc-plugin-browsersync": "1.0.0-beta.1",
+    "roc-plugin-style-css": "1.0.0-beta.1",
+    "roc-plugin-assets-images": "1.0.0-beta.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "~6.1.2",
+    "eslint": "~3.0.1",
+    "eslint-config-airbnb-base": "~4.0.0",
+    "eslint-plugin-babel": "~3.3.0",
+    "eslint-plugin-import": "~1.10.2"
+  },
+  "roc": {
+    "packages": [
+      "./lib/index.js"
+    ]
+  }
+}

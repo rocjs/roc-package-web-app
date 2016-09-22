@@ -6,10 +6,10 @@
   "license": "MIT",
   "dependencies": {
     "roc-package-web-app": "*",
-    "roc-plugin-react": "^1.0.0-alpha"
+    "roc-plugin-react": "*"
   },
   "devDependencies": {
     "roc-package-web-app-dev": "*",
-    "roc-plugin-react-dev": "^1.0.0-alpha"
+    "roc-plugin-react-dev": "*"
   }
 }
