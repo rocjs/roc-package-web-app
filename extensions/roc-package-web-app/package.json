@@ -1,6 +1,6 @@
 {
   "name": "roc-package-web-app",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Package for building web applications using Roc",
   "main": "lib/index.js",
   "scripts": {
@@ -21,9 +21,11 @@
   ],
   "repository": "https://github.com/rocjs/roc-package-web-app/tree/master/extensions/roc-package-web-app",
   "author": "Verdens Gang AS",
-  "contributors": [{
-    "name": "Gustaf Dalemar"
-  }],
+  "contributors": [
+    {
+      "name": "Gustaf Dalemar"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "config": "~1.16.0",
