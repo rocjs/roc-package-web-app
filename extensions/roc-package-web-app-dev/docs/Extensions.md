@@ -22,7 +22,7 @@ Package providing browser support through Webpack for Roc (Development)
 ### roc-plugin-browsersync — [v1.0.0-beta.1](https://www.npmjs.com/package/roc-plugin-browsersync)
 Plugin providing Browsersync for Roc
 
-### roc-plugin-style-css — [v1.0.0-beta.1](https://www.npmjs.com/package/roc-plugin-style-css)
+### roc-plugin-style-css — [v1.0.0-beta.2](https://www.npmjs.com/package/roc-plugin-style-css)
 Plugin providing CSS support for Webpack in Roc
 
 ### roc-plugin-assets-images — [v1.0.0-beta.1](https://www.npmjs.com/package/roc-plugin-assets-images)
