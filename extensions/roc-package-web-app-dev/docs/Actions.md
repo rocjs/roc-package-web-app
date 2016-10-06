@@ -4,7 +4,10 @@
 * [roc-abstract-package-base-dev](#roc-abstract-package-base-dev)
   * [after-clean](#after-clean)
   * [before-clean](#before-clean)
+* [roc-plugin-babel](#roc-plugin-babel)
+  * [babel-config](#babel-config)
 * [roc-package-webpack-dev](#roc-package-webpack-dev)
+  * [babel-config](#babel-config-1)
   * [build-webpack](#build-webpack)
   * [run-build-command](#run-build-command)
   * [run-dev-command](#run-dev-command)
@@ -44,7 +47,23 @@ __Connects to extension:__ `roc-abstract-package-base-dev`
 __Connects to hook:__ `before-clean`  
 __Have post:__ No  
 
+## roc-plugin-babel
+
+### babel-config
+
+Base Babel configuration
+
+__Connects to extension:__ Not specified  
+__Connects to hook:__ `babel-config`  
+__Have post:__ Yes  
+
 ## roc-package-webpack-dev
+
+### babel-config
+
+__Connects to extension:__ `roc-package-webpack-dev`  
+__Connects to hook:__ `babel-config`  
+__Have post:__ No  
 
 ### build-webpack
 
