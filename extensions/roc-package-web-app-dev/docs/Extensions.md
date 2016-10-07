@@ -19,7 +19,7 @@ Package providing Node support through Webpack for Roc (Development)
 Package providing browser support through Webpack for Roc (Development)
 
 ## Plugins
-### roc-plugin-babel — [v1.0.0-beta.1](https://www.npmjs.com/package/roc-plugin-babel)
+### roc-plugin-babel — [v1.0.0-beta.2](https://www.npmjs.com/package/roc-plugin-babel)
 Roc plugin that adds basic Babel management
 
 ### roc-plugin-browsersync — [v1.0.0-beta.2](https://www.npmjs.com/package/roc-plugin-browsersync)

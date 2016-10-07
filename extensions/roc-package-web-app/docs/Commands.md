@@ -34,7 +34,7 @@ roc start [artifact]
 | artifact | Path to an artifact to start. |         | `Filepath` | No       | Yes          |
 
 ###  Settings options
-* [runtime](/Users/gustaf/VG/public/roc-package/roc-package-web-app/extensions/roc-package-web-app/docs/Settings.md#runtime)
+* [runtime](docs/Settings.md#runtime)
 
 ###  Defined by extensions
 roc-plugin-start
