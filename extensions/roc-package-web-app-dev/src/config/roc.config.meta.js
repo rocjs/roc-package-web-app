@@ -9,6 +9,16 @@ import {
 export default {
     settings: {
         build: {
+            path: {
+                override: 'roc-package-webpack-dev',
+                validator: required(notEmpty((value, info) => {
+                    if (value && value.charAt(0) !== '/') {
+                        return 'Must start with "/"!';
+                    }
+
+                    return isPath(value, info);
+                })),
+            },
             targets: {
                 override: 'roc-abstract-package-base-dev',
                 validator: isArray(/^web|node$/i),

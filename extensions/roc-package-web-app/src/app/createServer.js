@@ -5,12 +5,13 @@ import https from 'https';
 import debug from 'debug';
 import koa from 'koa';
 import serve from 'koa-static';
-import mount from 'koa-mount';
 import addTrailingSlash from 'koa-add-trailing-slashes';
 import normalizePath from 'koa-normalize-path';
 import lowercasePath from 'koa-lowercase-path';
 import removeTrailingSlash from 'koa-remove-trailing-slashes';
 import { merge, getSettings, getAbsolutePath } from 'roc';
+
+import basepathSupport from './basepathSupport';
 
 /**
  * Creates a server instance.
@@ -42,6 +43,9 @@ export default function createServer(options = {}, beforeUserMiddlewares = [], {
 
     const server = koa();
     const runtimeSettings = merge(getSettings('runtime'), options);
+
+    // Add support for rocPath
+    server.use(basepathSupport(rocPath));
 
     if (useDefaultKoaMiddlewares) {
         // eslint-disable-next-line
@@ -96,12 +100,10 @@ export default function createServer(options = {}, beforeUserMiddlewares = [], {
         port = process.env.PORT || runtimeSettings.port,
         httpsPort = process.env.HTTPS_PORT || runtimeSettings.https.port
     ) {
-        const app = koa();
         const servers = {};
-        app.use(mount(rocPath, server));
 
         // Start the server on HTTP
-        servers.http = http.createServer(app.callback()).listen(port);
+        servers.http = http.createServer(server.callback()).listen(port);
         logger(`Server started on port ${port} (HTTP) and served from ${rocPath}`);
 
         // If a HTTPS port is defined we will try to start the application with SSL/TLS
@@ -121,7 +123,7 @@ export default function createServer(options = {}, beforeUserMiddlewares = [], {
                     cert: readFileSync(cert),
                 };
 
-                servers.https = https.createServer(httpsOptions, app.callback()).listen(httpsPort);
+                servers.https = https.createServer(httpsOptions, server.callback()).listen(httpsPort);
                 logger(`Server started on port ${httpsPort} (HTTPS) and served from ${rocPath}`);
             } else {
                 logger('You have defined a HTTPS port but not given any certificate files to use…');
