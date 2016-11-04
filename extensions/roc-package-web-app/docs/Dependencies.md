@@ -43,9 +43,6 @@ __Version__: ~1.3.0
 #### [koa-lowercase-path](https://www.npmjs.com/package/koa-lowercase-path)
 __Version__: ~1.0.0  
 
-#### [koa-mount](https://www.npmjs.com/package/koa-mount)
-__Version__: ~1.3.0  
-
 #### [koa-normalize-path](https://www.npmjs.com/package/koa-normalize-path)
 __Version__: ~1.0.0  
 

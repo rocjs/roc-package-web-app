@@ -1,6 +1,6 @@
 {
   "name": "roc-package-web-app",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Package for building web applications using Roc",
   "main": "lib/index.js",
   "scripts": {
