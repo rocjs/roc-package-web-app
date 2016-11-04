@@ -26,7 +26,6 @@ export default {
         uses: generateDependencies(packageJSON, [
             'koa',
             'koa-static',
-            'koa-mount',
             'koa-errors',
             'koa-helmet',
             'koa-etag',
