@@ -80,7 +80,7 @@ export default {
                     },
                     defer: {
                         description: 'If this should be performed after looking for a file on disk.',
-                        validator: isBoolean,
+                        validator: required(isBoolean),
                     },
                 },
                 staticServe: {
