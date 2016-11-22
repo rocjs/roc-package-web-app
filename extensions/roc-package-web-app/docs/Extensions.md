@@ -12,7 +12,7 @@ It is therefore _never to be included_ as a direct dependency in app or componen
 ### roc-package-webpack — [v1.0.0-beta.4](https://www.npmjs.com/package/roc-package-webpack)
 Package providing Webpack support for Roc
 
-### roc-package-webpack-node — [v1.0.0-beta.2](https://www.npmjs.com/package/roc-package-webpack-node)
+### roc-package-webpack-node — [v1.0.0-beta.3](https://www.npmjs.com/package/roc-package-webpack-node)
 Package providing Node support through Webpack.
 
 ### roc-package-webpack-web — [v1.0.0-beta.3](https://www.npmjs.com/package/roc-package-webpack-web)
