@@ -76,11 +76,11 @@ export default {
                     enabled: {
                         description: 'Set to true to enforce trailing slashes, false to remove them and ' +
                             'null for no rule.',
-                        validator: required(isBoolean),
+                        validator: isBoolean,
                     },
                     defer: {
                         description: 'If this should be performed after looking for a file on disk.',
-                        validator: required(isBoolean),
+                        validator: isBoolean,
                     },
                 },
                 staticServe: {
