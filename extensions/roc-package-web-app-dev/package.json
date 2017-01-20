@@ -29,7 +29,7 @@
   "dependencies": {
     "roc": "^1.0.0-rc.12",
     "roc-package-webpack-dev": "^1.0.0-beta.2",
-    "roc-package-webpack-node-dev": "^1.0.0-beta.2",
+    "roc-package-webpack-node-dev": "^1.0.0-beta.3",
     "roc-package-webpack-web-dev": "^1.0.0-beta.3",
     "roc-plugin-browsersync": "^1.0.0-beta.2",
     "roc-plugin-style-css": "^1.0.0-beta.3",
