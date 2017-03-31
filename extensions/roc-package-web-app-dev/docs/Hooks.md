@@ -18,6 +18,7 @@
 * [roc-package-webpack-node-dev](#roc-package-webpack-node-dev)
   * [dev-process-created](#dev-process-created)
   * [dev-process-stopping](#dev-process-stopping)
+  * [get-webpack-node-targets](#get-webpack-node-targets)
 * [roc-plugin-style-css](#roc-plugin-style-css)
   * [add-style](#add-style)
 
@@ -166,6 +167,13 @@ __Expected return value:__ _Nothing_
 | Name          | Description                               | Type | Required | Can be empty |
 | ------------- | ----------------------------------------- | ---- | -------- | ------------ |
 | serverProcess | The server process that is being stopped. |      | No       |              |
+
+### get-webpack-node-targets
+
+Used to inform which targets should be considered Webpack "node" targets. Actions should concat the previousValue to build the complete value.
+
+__Initial value:__ `["node"]`  
+__Expected return value:__ `Array(String)`
 
 ## roc-plugin-style-css
 

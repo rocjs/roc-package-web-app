@@ -10,10 +10,15 @@ export default {
             input: {
                 web: 'src/client/index.js',
                 node: 'src/server/index.js',
+                static: 'src/static/index.js',
             },
             output: {
                 web: 'build/client',
                 node: 'build/server',
+                static: 'build/static',
+            },
+            static: {
+                routes: ['/'],
             },
             koaMiddlewares: 'src/server/middlewares.js',
             useDefaultKoaMiddlewares: true,

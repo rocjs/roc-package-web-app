@@ -2,6 +2,7 @@ import {
     isArray,
     isBoolean,
     isPath,
+    isString,
     notEmpty,
     required,
 } from 'roc/validators';
@@ -21,7 +22,7 @@ export default {
             },
             targets: {
                 override: 'roc-abstract-package-base-dev',
-                validator: isArray(/^web|node$/i),
+                validator: isArray(/^web|node|static$/i),
             },
             input: {
                 __meta: {
@@ -35,6 +36,10 @@ export default {
                     description: 'The node/server entry point file.',
                     validator: required(notEmpty(isPath)),
                 },
+                static: {
+                    description: 'The static document renderer entry point file.',
+                    validator: notEmpty(isPath),
+                },
             },
             output: {
                 __meta: {
@@ -47,6 +52,17 @@ export default {
                 node: {
                     description: 'The output directory for the server build.',
                     validator: required(notEmpty(isPath)),
+                },
+                static: {
+                    description: 'The output directory for the static build.',
+                    validator: notEmpty(isPath),
+                },
+            },
+            static: {
+                routes: {
+                    description: 'List of routes that will be rendered for static distribution. ' +
+                        'Exported function from `static` entry will be called for each route.',
+                    validator: required(isArray(isString)),
                 },
             },
             koaMiddlewares: {
