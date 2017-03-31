@@ -5,11 +5,11 @@
   "author": "VG",
   "license": "MIT",
   "dependencies": {
-    "roc-package-web-app": "*",
-    "roc-plugin-react": "*"
+    "roc-package-web-app": "^1.0.0-beta.7",
+    "roc-plugin-react": "^1.0.0-beta.3"
   },
   "devDependencies": {
-    "roc-package-web-app-dev": "*",
-    "roc-plugin-react-dev": "*"
+    "roc-package-web-app-dev": "^1.0.0-beta.7",
+    "roc-plugin-react-dev": "^1.0.0-beta.3"
   }
 }

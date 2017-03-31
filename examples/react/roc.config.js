@@ -8,7 +8,8 @@ module.exports = {
         build: {
             input: {
                 web: 'client.js',
-                node: 'server.js'
+                node: 'server.js',
+                static: 'static.js',
             }
         }
     }
