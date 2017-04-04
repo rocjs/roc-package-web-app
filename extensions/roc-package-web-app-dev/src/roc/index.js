@@ -26,6 +26,20 @@ export default {
                 }
             });
         },
+    }, {
+        description: 'Adds __static__ as a valid Webpack target.',
+        extension: 'roc-package-webpack-dev',
+        hook: 'get-webpack-targets',
+        action: ({ previousValue }) => () => () => previousValue.concat('static'),
+    }, {
+        description: 'Adds __static__ as a valid Webpack "node" target.',
+        extension: 'roc-package-webpack-node-dev',
+        hook: 'get-webpack-node-targets',
+        action: ({ previousValue }) => () => () => previousValue.concat('static'),
+    }, {
+        hook: 'run-build-command',
+        description: 'Prepate static distribution.',
+        action: lazyRequire('../actions/static-prepare'),
     }],
     hooks: {
         'server-started': {

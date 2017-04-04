@@ -28,6 +28,9 @@
 * [roc-package-web-app-dev](#roc-package-web-app-dev)
   * [build-webpack](#build-webpack-5)
   * [dev-process-created](#dev-process-created)
+  * [get-webpack-node-targets](#get-webpack-node-targets)
+  * [get-webpack-targets](#get-webpack-targets-2)
+  * [run-build-command](#run-build-command-1)
 
 ## roc-abstract-package-base-dev
 
@@ -185,4 +188,28 @@ __Have post:__ No
 
 __Connects to extension:__ Not specified  
 __Connects to hook:__ `dev-process-created`  
+__Have post:__ No  
+
+### get-webpack-node-targets
+
+Adds __static__ as a valid Webpack "node" target.
+
+__Connects to extension:__ `roc-package-webpack-node-dev`  
+__Connects to hook:__ `get-webpack-node-targets`  
+__Have post:__ No  
+
+### get-webpack-targets
+
+Adds __static__ as a valid Webpack target.
+
+__Connects to extension:__ `roc-package-webpack-dev`  
+__Connects to hook:__ `get-webpack-targets`  
+__Have post:__ No  
+
+### run-build-command
+
+Prepate static distribution.
+
+__Connects to extension:__ Not specified  
+__Connects to hook:__ `run-build-command`  
 __Have post:__ No  
